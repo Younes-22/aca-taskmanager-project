@@ -3,4 +3,12 @@ resource "azurerm_virtual_network" "this" {
     location = var.location
     resource_group_name = var.resource_group_name
     address_space = [var.vnet_cidr]
+    
+  delegation {
+    name = "container-apps-delegation"
+
+    service_delegation {
+      name = "Microsoft.App/environments"
+    }
+  }
 }

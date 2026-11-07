@@ -17,3 +17,9 @@ variable "vnet_cidr" {
     description = "Address range for the Virtual Network"
     type = string
 }
+
+variable "container_app_subnet_cidr" {
+    description = "Address range for the Azure Container Apps subnet"
+    type = string
+    default = "10.0.1.0/27"
+}
