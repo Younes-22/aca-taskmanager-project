@@ -27,3 +27,8 @@ variable "registry_name" {
   description = "Globally unique name for the Azure Container Registry"
   type        = string
 }
+
+variable "identity_name" {
+  description = "Name of the user-assigned managed identity"
+  type        = string
+}

@@ -19,3 +19,12 @@ module "container_registry" {
   location            = var.location
   registry_name       = var.registry_name
 }
+
+module "identity" {
+  source = "./modules/identity"
+
+  resource_group_name = var.resource_group_name
+  location            = var.location
+  identity_name       = var.identity_name
+  acr_id              = module.container_registry.registry_id
+}
