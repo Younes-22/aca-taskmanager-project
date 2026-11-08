@@ -5,5 +5,5 @@ output "vnet_id" {
 
 output "container_apps_subnet_id" {
   description = "ID of the Container Apps subnet"
-  value       = azurerm_subnet.container_apps.id
+  value       = azurerm_subnet.container_apps
 }
