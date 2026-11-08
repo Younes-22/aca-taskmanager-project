@@ -11,3 +11,11 @@ module "networking" {
   vnet_name           = var.vnet_name
   vnet_cidr           = var.vnet_cidr
 }
+
+module "container_registry" {
+  source = "./modules/container-registry"
+
+  resource_group_name = azurerm_resource_group.main.name
+  location            = var.location
+  registry_name       = var.registry_name
+}
